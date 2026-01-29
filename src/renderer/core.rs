@@ -115,7 +115,7 @@ impl Renderer {
             });
             let voxel_data = device.create_buffer_init(&wgpu::util::BufferInitDescriptor {
                 label: Some("voxel bricks storage buffer"),
-                contents: bytemuck::cast_slice(&voxels.bricks),
+                contents: bytemuck::cast_slice(&voxels.data),
                 usage: wgpu::BufferUsages::STORAGE | wgpu::BufferUsages::COPY_DST,
             });
 
